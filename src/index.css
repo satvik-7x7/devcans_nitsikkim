@@ -5,6 +5,40 @@
 /* Rest of your custom styles */
 /* DevCans Terminal-Inspired Design System */
 
+/* ...existing code... */
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  header, nav, main, footer {
+    padding: 10px;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  /* Example: Stack columns vertically */
+  .row {
+    flex-direction: column;
+  }
+  /* Example: Make images scale */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Adjust navigation/menu for mobile */
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ...existing code... */
+
 @layer base {
   :root {
     /* Terminal Dark Theme */
