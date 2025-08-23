@@ -6,27 +6,35 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'events', label: 'Events' },
-    { id: 'team', label: 'Team' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'hero', label: 'Home', type: 'scroll' },
+    { id: 'about', label: 'About', type: 'scroll' },
+    { id: 'events', label: 'Events', type: 'scroll' },
+    { id: 'teams', label: 'Team', type: 'link', href: '/teams' },
+    { id: 'contact', label: 'Contact', type: 'scroll' }
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+  const handleNavClick = (item: any) => {
+    if (item.type === 'link') {
+      window.location.href = item.href;
+    } else {
+      if (window.location.pathname !== '/') {
+        window.location.href = `/#${item.id}`;
+        return;
+      }
+      const element = document.getElementById(item.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsOpen(false);
+      }
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.id);
+      const scrollSections = navItems.filter(item => item.type === 'scroll').map(item => item.id);
       const scrollPosition = window.scrollY + 100;
 
-      for (const sectionId of sections) {
+      for (const sectionId of scrollSections) {
         const element = document.getElementById(sectionId);
         if (element) {
           const offsetTop = element.offsetTop;
@@ -57,13 +65,23 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-              >
-                {item.label}
-              </button>
+              item.type === 'link' ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className="nav-link"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
 
@@ -80,13 +98,24 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-terminal-green/20">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 nav-link"
-              >
-                {item.label}
-              </button>
+              item.type === 'link' ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className="block w-full text-left py-2 nav-link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className="block w-full text-left py-2 nav-link"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
         )}
