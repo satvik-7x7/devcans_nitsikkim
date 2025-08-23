@@ -56,12 +56,6 @@ const HeroSection = () => {
           >
             Explore Our Journey
           </button>
-          <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-terminal rounded-lg"
-          >
-            Join DevCans
-          </button>
         </div>
 
         <div className="flex justify-center space-x-8 mb-12 fade-in-up" style={{ animationDelay: '0.8s' }}>

@@ -2,12 +2,14 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import MatrixBackground from '@/components/MatrixBackground';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import CircularGallery from '../../ReactBitscomponets/CircularGallery/CircularGallery.jsx';
 import pratyayKuilaImage from '/cse_faculty/PratyayKulia.jpeg';
 import BamBahadurImage from '/cse_faculty/BamBahadur.jpg';
 import DikshaImage from '/cse_faculty/deekshaRangwani.jpeg';
 import Harshit from '/devCans4thyear/Harshit.png';
 import Vidhi from '/devCans4thyear/vidhiDidi.png';
 import Vipin from '/devCans4thyear/vipin.png';
+
 const Teams = () => {
   const facultyAdvisers = [
     {
@@ -168,12 +170,20 @@ const Teams = () => {
     <div key={person.name} className="card-terminal cyber-glow group fade-in-up">
       <div className="relative mb-6 overflow-hidden rounded-lg">
           <div className="w-full h-48 bg-terminal-bg-lighter flex items-center justify-center overflow-hidden rounded-full">
-  <img
-    src={person.image}
-    alt={person.name}
-    className="object-cover w-24 h-24 rounded-full"
-  />
-</div>
+            {person.image.includes('placeholder') ? (
+              <div className="w-24 h-24 bg-terminal-green/20 rounded-full flex items-center justify-center">
+                <span className="text-2xl font-bold terminal-text">
+                  {person.name.split(' ').map((n: string) => n[0]).join('')}
+                </span>
+              </div>
+            ) : (
+              <img
+                src={person.image}
+                alt={person.name}
+                className="object-cover w-24 h-24 rounded-full"
+              />
+            )}
+          </div>
         <div className="absolute inset-0 bg-gradient-to-t from-terminal-bg/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
@@ -261,14 +271,30 @@ const Teams = () => {
               </p>
             </div>
 
-          <div className="grid md:grid-cols-5 gap-8 max-w-4xl mx-auto">
-  {facultyAdvisers.map((adviser, index) => (
-    <div key={adviser.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
-      {renderPersonCard(adviser, false)}
-    </div>
-  ))}
-</div>
-
+            {/* Circular Gallery */}
+            <div style={{ height: '600px', position: 'relative' }}>
+              <CircularGallery 
+                items={[
+                  {
+                    image: pratyayKuilaImage,
+                    text: 'Dr. Pratyay Kuila - President'
+                  },
+                  {
+                    image: BamBahadurImage,
+                    text: 'Dr. Bam Bahadur Sinha - Vice President'
+                  },
+                  {
+                    image: DikshaImage,
+                    text: 'Dr. Diksha Rangwani - Faculty Coordinator'
+                  }
+                ]}
+                bend={0} 
+                textColor="#ffffff" 
+                borderRadius={0.05} 
+                scrollSpeed={2}
+                scrollEase={0.05}
+              />
+            </div>
           </div>
         </section>
 
