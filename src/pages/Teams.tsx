@@ -11,51 +11,15 @@ import Vidhi from '/devCans4thyear/vidhiDidi.png';
 import Vipin from '/devCans4thyear/vipin.png';
 
 const Teams = () => {
-  const facultyAdvisers = [
-    {
-      name: 'Dr. Pratyay Kuila',
-      role: 'President',
-      department: 'Computer Science & Engineering',
-      bio: ' Evolutionary Algorithms, AI and Machine Learning, Quantum-Inspired Algorithm, Mobile Fog and Edge Computing, Wireless Sensor Networks',
-      image: pratyayKuilaImage,
-      social: {
-        email: 'pratyay_kuila@nitsikkim.ac.in',
-        linkedin: '#'
-      }
-    },
-    {
-      name: 'Dr. Bam Bahadur Sinha',
-      role: 'Vice President',
-      department: 'Computer Science & Engineering',
-      bio: 'Professor with 15+ years of experience in software engineering and academic research. Passionate about nurturing young developers.',
-      image: '/api/placeholder/300/300',
-      social: {
-        email: 'bambahadursinha@nitsikkim.ac.in',
-        linkedin: '#'
-      }
-    },
-    {
-      name: 'Dr. Priya Sharma',
-      role: 'Co-Faculty Adviser',
-      department: 'Information Technology',
-      bio: 'Associate Professor specializing in AI/ML and data science. Mentor for various coding competitions and hackathons.',
-      image: '/api/placeholder/300/300',
-      social: {
-        email: 'diksharangwani@nitsikkim.ac.in',
-        linkedin: '#'
-      }
-    }
-
-  ];
 
   const teamLeads = [
-    {
-      name: 'Arjun Sharma',
-      role: 'President',
-      year: 'Final Year CSE',
-      bio: 'Full-stack developer passionate about building scalable web applications and leading tech communities.',
-      skills: ['React', 'Node.js', 'Python', 'AWS'],
-      image: '/api/placeholder/300/300',
+     {
+      name: 'Vipin Mishra',
+      role: 'Treasurer',
+      year: 'Third Year IT',
+      bio: 'Cloud Systems & AIML',
+      skills: ['Python', 'TensorFlow', 'C++', 'Data Science'],
+      image: './devCans4thyear/vipin.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -63,12 +27,12 @@ const Teams = () => {
       }
     },
     {
-      name: 'Priya Patel',
-      role: 'Vice President',
-      year: 'Third Year IT',
-      bio: 'AI/ML enthusiast and competitive programmer with expertise in data science and algorithms.',
-      skills: ['Python', 'TensorFlow', 'C++', 'Data Science'],
-      image: '/api/placeholder/300/300',
+      name: 'Harshit Vyas',
+      role: 'Secretary',
+      year: 'Final Year CSE',
+      bio: 'Cybersecurity',
+      skills: ['React', 'ShellScripting', 'Burpsuite', 'Python', 'C++', 'Cryptography'],
+      image: './devCans4thyear/Harshit.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -76,29 +40,16 @@ const Teams = () => {
       }
     },
     {
-      name: 'Rahul Singh',
-      role: 'Technical Lead',
+      name: 'Vidhi Verma',
+      role: 'Convenor',
       year: 'Third Year CSE',
-      bio: 'System architect and open source contributor, specializing in backend development and DevOps.',
+      bio: 'Web Development',
       skills: ['Java', 'Docker', 'Kubernetes', 'PostgreSQL'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/vidhiDidi.png',
       social: {
         github: '#',
         linkedin: '#',
-        email: 'rahul@devcans.com'
-      }
-    },
-    {
-      name: 'Sneha Gupta',
-      role: 'Events Coordinator',
-      year: 'Second Year ECE',
-      bio: 'UI/UX designer and frontend developer, passionate about creating beautiful and functional user experiences.',
-      skills: ['JavaScript', 'React', 'Figma', 'CSS'],
-      image: '/api/placeholder/300/300',
-      social: {
-        github: '#',
-        linkedin: '#',
-        email: 'sneha@devcans.com'
+        email: 'vidhi@devcans.com'
       }
     }
   ];
@@ -364,14 +315,31 @@ const Teams = () => {
     },
 
   ];
-
   const renderPersonCard = (person, showSkills = true) => (
     <div key={person.name} className="card-terminal cyber-glow group fade-in-up">
-      <div className="relative mb-6 overflow-hidden rounded-lg">
-        <div className="w-full h-48 bg-terminal-bg-lighter flex items-center justify-center">
-          <div className="w-24 h-24 bg-terminal-green/20 rounded-full flex items-center justify-center">
+      <div className="relative mb-6 overflow-hidden rounded-lg ">
+        <div className="w-full h-50 bg-terminal-bg-lighter flex items-center justify-center">
+          <img
+            src={person.image}
+            alt={`${person.name} - ${person.role}`}
+            className="w-40 h-40 object-cover rounded-full transition-transform duration-300 group-hover:scale-110 shadow-lg border-2 border-terminal-green/30"
+            onError={(e) => {
+              // Fallback to initials if image fails to load
+              const target = e.target;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling;
+              if (fallback) {
+                fallback.style.display = 'flex';
+              }
+            }}
+          />
+          {/* Fallback initials circle - hidden by default, shown if image fails */}
+          <div 
+            className="w-40 h-40 bg-terminal-green/20 rounded-full flex items-center justify-center shadow-lg border-2 border-terminal-green/30 transition-transform duration-300 group-hover:scale-110"
+            style={{ display: 'none' }}
+          >
             <span className="text-2xl font-bold terminal-text">
-              {person.name.split(' ').map((n: string) => n[0]).join('')}
+              {person.name.split(' ').map((n) => n[0]).join('')}
             </span>
           </div>
         </div>
@@ -401,6 +369,7 @@ const Teams = () => {
           ))}
         </div>
       )}
+
 
       <div className="flex space-x-4 pt-4 border-t border-terminal-green/20">
         {person.social.github && (
