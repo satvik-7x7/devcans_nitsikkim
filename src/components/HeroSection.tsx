@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="text-center z-10 max-w-4xl mx-auto px-4">
         <div className="mb-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
           <div className="inline-flex items-center space-x-2 mb-4">
-            <Code className="text-terminal-green w-12 h-12" />
+            <Code className="text-terminal-green w-12 h-12 glitch" />
             <span className="text-6xl md:text-8xl font-bold terminal-text glitch">
               {'<DevCans/>'}
             </span>
