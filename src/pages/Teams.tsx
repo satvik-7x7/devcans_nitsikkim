@@ -2,41 +2,56 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import MatrixBackground from '@/components/MatrixBackground';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
+import pratyayKuilaImage from '/cse_faculty/PratyayKulia.jpeg';
+import BamBahadurImage from '/cse_faculty/BamBahadur.jpg';
+import DikshaImage from '/cse_faculty/deekshaRangwani.jpeg';
+import Harshit from '/devCans4thyear/Harshit.png';
+import Vidhi from '/devCans4thyear/vidhiDidi.png';
+import Vipin from '/devCans4thyear/vipin.png';
 const Teams = () => {
   const facultyAdvisers = [
     {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Faculty Adviser',
+      name: 'Dr. Pratyay Kuila',
+      role: 'President',
       department: 'Computer Science & Engineering',
-      bio: 'Professor with 15+ years of experience in software engineering and academic research. Passionate about nurturing young developers.',
-      image: '/api/placeholder/300/300',
+      bio: ' Evolutionary Algorithms, AI and Machine Learning, Quantum-Inspired Algorithm, Mobile Fog and Edge Computing, Wireless Sensor Networks',
+      image: pratyayKuilaImage,
       social: {
-        email: 'rajesh.kumar@nitsikkim.ac.in',
+        email: 'pratyay_kuila@nitsikkim.ac.in',
         linkedin: '#'
       }
     },
     {
-      name: 'Dr. Priya Sharma',
-      role: 'Co-Faculty Adviser',
-      department: 'Information Technology',
-      bio: 'Associate Professor specializing in AI/ML and data science. Mentor for various coding competitions and hackathons.',
-      image: '/api/placeholder/300/300',
+      name: 'Dr. Bam Bahadur Sinha',
+      role: 'Vice President',
+      department: 'Computer Science & Engineering',
+      bio:'Artificial Intelligence & Machine Learning, Deep Learning, Optimization Techniques, Recommender Systems, Generative AI',
+      image: BamBahadurImage,
       social: {
-        email: 'priya.sharma@nitsikkim.ac.in',
+        email: 'bambahadursinha@nitsikkim.ac.in',
+        linkedin: '#'
+      }
+    },
+    {
+      name: 'Dr. Diksha Rangwani',
+      role: 'Faculty Coordinator',
+      department: 'Computer Science & Engineering',
+      bio:'Energy-Efficient Authentication Protocols, Machine Learning based Authentication Protocols, Network Security',
+      image: DikshaImage,
+      social: {
+        email: 'diksharangwani@nitsikkim.ac.in',
         linkedin: '#'
       }
     }
+
   ];
 
   const teamLeads = [
     {
-      name: 'Arjun Sharma',
+      name: 'Harshit Vyas',
       role: 'President',
       year: 'Final Year CSE',
-      bio: 'Full-stack developer passionate about building scalable web applications and leading tech communities.',
-      skills: ['React', 'Node.js', 'Python', 'AWS'],
-      image: '/api/placeholder/300/300',
+      image: Harshit,
       social: {
         github: '#',
         linkedin: '#',
@@ -44,12 +59,10 @@ const Teams = () => {
       }
     },
     {
-      name: 'Priya Patel',
-      role: 'Vice President',
-      year: 'Third Year IT',
-      bio: 'AI/ML enthusiast and competitive programmer with expertise in data science and algorithms.',
-      skills: ['Python', 'TensorFlow', 'C++', 'Data Science'],
-      image: '/api/placeholder/300/300',
+      name: 'Vidhi Verma',
+      role: 'Convenor',
+      year: 'Final Year CSE',
+      image: Vidhi,
       social: {
         github: '#',
         linkedin: '#',
@@ -57,29 +70,15 @@ const Teams = () => {
       }
     },
     {
-      name: 'Rahul Singh',
-      role: 'Technical Lead',
-      year: 'Third Year CSE',
-      bio: 'System architect and open source contributor, specializing in backend development and DevOps.',
-      skills: ['Java', 'Docker', 'Kubernetes', 'PostgreSQL'],
-      image: '/api/placeholder/300/300',
+      name: 'Vipin Mishra',
+      role: 'Treasurer',
+      year: 'Final Year CSE',
+     
+      image: Vipin,
       social: {
         github: '#',
         linkedin: '#',
         email: 'rahul@devcans.com'
-      }
-    },
-    {
-      name: 'Sneha Gupta',
-      role: 'Events Coordinator',
-      year: 'Second Year ECE',
-      bio: 'UI/UX designer and frontend developer, passionate about creating beautiful and functional user experiences.',
-      skills: ['JavaScript', 'React', 'Figma', 'CSS'],
-      image: '/api/placeholder/300/300',
-      social: {
-        github: '#',
-        linkedin: '#',
-        email: 'sneha@devcans.com'
       }
     }
   ];
@@ -168,13 +167,13 @@ const Teams = () => {
   const renderPersonCard = (person: any, showSkills = true) => (
     <div key={person.name} className="card-terminal cyber-glow group fade-in-up">
       <div className="relative mb-6 overflow-hidden rounded-lg">
-        <div className="w-full h-48 bg-terminal-bg-lighter flex items-center justify-center">
-          <div className="w-24 h-24 bg-terminal-green/20 rounded-full flex items-center justify-center">
-            <span className="text-2xl font-bold terminal-text">
-              {person.name.split(' ').map((n: string) => n[0]).join('')}
-            </span>
-          </div>
-        </div>
+          <div className="w-full h-48 bg-terminal-bg-lighter flex items-center justify-center overflow-hidden rounded-full">
+  <img
+    src={person.image}
+    alt={person.name}
+    className="object-cover w-24 h-24 rounded-full"
+  />
+</div>
         <div className="absolute inset-0 bg-gradient-to-t from-terminal-bg/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
@@ -255,20 +254,21 @@ const Teams = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold terminal-text mb-6 slide-in-left">
-                Faculty Advisers
+                Faculty Advisors
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-in-right" style={{ animationDelay: '0.2s' }}>
                 Our mentors and guides who provide invaluable support and direction to our club.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {facultyAdvisers.map((adviser, index) => (
-                <div key={adviser.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
-                  {renderPersonCard(adviser, false)}
-                </div>
-              ))}
-            </div>
+          <div className="grid md:grid-cols-5 gap-8 max-w-4xl mx-auto">
+  {facultyAdvisers.map((adviser, index) => (
+    <div key={adviser.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
+      {renderPersonCard(adviser, false)}
+    </div>
+  ))}
+</div>
+
           </div>
         </section>
 
