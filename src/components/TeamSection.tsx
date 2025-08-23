@@ -3,8 +3,8 @@ import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: 'Arjun Sharma',
-      role: 'President',
+      name: 'Harshit Vyas',
+      role: 'Secretary',
       year: 'Final Year CSE',
       bio: 'Full-stack developer passionate about building scalable web applications and leading tech communities.',
       skills: ['React', 'Node.js', 'Python', 'AWS'],
@@ -12,12 +12,12 @@ const TeamSection = () => {
       social: {
         github: '#',
         linkedin: '#',
-        email: 'arjun@devcans.com'
+        email: 'harshit@devcans.com'
       }
     },
     {
-      name: 'Priya Patel',
-      role: 'Vice President',
+      name: 'Vipin Mishra',
+      role: 'Treasurer',
       year: 'Third Year IT',
       bio: 'AI/ML enthusiast and competitive programmer with expertise in data science and algorithms.',
       skills: ['Python', 'TensorFlow', 'C++', 'Data Science'],
@@ -25,12 +25,12 @@ const TeamSection = () => {
       social: {
         github: '#',
         linkedin: '#',
-        email: 'priya@devcans.com'
+        email: 'vipin@devcans.com'
       }
     },
     {
-      name: 'Rahul Singh',
-      role: 'Technical Lead',
+      name: 'Vidhi Verma',
+      role: 'Convenor',
       year: 'Third Year CSE',
       bio: 'System architect and open source contributor, specializing in backend development and DevOps.',
       skills: ['Java', 'Docker', 'Kubernetes', 'PostgreSQL'],
@@ -38,7 +38,7 @@ const TeamSection = () => {
       social: {
         github: '#',
         linkedin: '#',
-        email: 'rahul@devcans.com'
+        email: 'vidhi@devcans.com'
       }
     },
     {

@@ -10,7 +10,7 @@ const Teams = () => {
       role: 'Faculty Adviser',
       department: 'Computer Science & Engineering',
       bio: 'Professor with 15+ years of experience in software engineering and academic research. Passionate about nurturing young developers.',
-      image: '/api/placeholder/300/300',
+      image: '/images/faculty/rajesh-kumar.jpg',
       social: {
         email: 'rajesh.kumar@nitsikkim.ac.in',
         linkedin: '#'
@@ -21,7 +21,7 @@ const Teams = () => {
       role: 'Co-Faculty Adviser',
       department: 'Information Technology',
       bio: 'Associate Professor specializing in AI/ML and data science. Mentor for various coding competitions and hackathons.',
-      image: '/api/placeholder/300/300',
+      image: '/images/faculty/priya-sharma.jpg',
       social: {
         email: 'priya.sharma@nitsikkim.ac.in',
         linkedin: '#'
@@ -30,68 +30,55 @@ const Teams = () => {
   ];
 
   const teamLeads = [
-    {
-      name: 'Arjun Sharma',
-      role: 'President',
-      year: 'Final Year CSE',
-      bio: 'Full-stack developer passionate about building scalable web applications and leading tech communities.',
-      skills: ['React', 'Node.js', 'Python', 'AWS'],
-      image: '/api/placeholder/300/300',
-      social: {
-        github: '#',
-        linkedin: '#',
-        email: 'arjun@devcans.com'
-      }
-    },
-    {
-      name: 'Priya Patel',
-      role: 'Vice President',
+     {
+      name: 'Vipin Mishra',
+      role: 'Treasurer',
       year: 'Third Year IT',
-      bio: 'AI/ML enthusiast and competitive programmer with expertise in data science and algorithms.',
+      bio: 'Cloud Systems & AIML',
       skills: ['Python', 'TensorFlow', 'C++', 'Data Science'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/vipin.png',
       social: {
         github: '#',
         linkedin: '#',
-        email: 'priya@devcans.com'
+        email: 'vipin@devcans.com'
       }
     },
     {
-      name: 'Rahul Singh',
-      role: 'Technical Lead',
+      name: 'Harshit Vyas',
+      role: 'Secretary',
+      year: 'Final Year CSE',
+      bio: 'Cybersecurity',
+      skills: ['React', 'ShellScripting', 'Burpsuite', 'Python', 'C++', 'Cryptography'],
+      image: './devCans4thyear/Harshit.png',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'harshit@devcans.com'
+      }
+    },
+    {
+      name: 'Vidhi Verma',
+      role: 'Convenor',
       year: 'Third Year CSE',
-      bio: 'System architect and open source contributor, specializing in backend development and DevOps.',
+      bio: 'Web Development',
       skills: ['Java', 'Docker', 'Kubernetes', 'PostgreSQL'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/vidhiDidi.png',
       social: {
         github: '#',
         linkedin: '#',
-        email: 'rahul@devcans.com'
-      }
-    },
-    {
-      name: 'Sneha Gupta',
-      role: 'Events Coordinator',
-      year: 'Second Year ECE',
-      bio: 'UI/UX designer and frontend developer, passionate about creating beautiful and functional user experiences.',
-      skills: ['JavaScript', 'React', 'Figma', 'CSS'],
-      image: '/api/placeholder/300/300',
-      social: {
-        github: '#',
-        linkedin: '#',
-        email: 'sneha@devcans.com'
+        email: 'vidhi@devcans.com'
       }
     }
   ];
 
-  const members = [
+  const coreMembers = [
     {
-      name: 'Aditya Kumar',
+      name: 'Raj Kumar Prasad',
       role: 'Core Member',
-      year: 'Second Year CSE',
-      bio: 'Mobile app developer and tech blogger, focused on cross-platform development.',
+      year: 'Final Year CSE',
+      bio: 'Web Development',
       skills: ['Flutter', 'Dart', 'Firebase', 'React Native'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/raj.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -99,12 +86,12 @@ const Teams = () => {
       }
     },
     {
-      name: 'Nisha Reddy',
+      name: 'Sharim Farhan',
       role: 'Core Member',
-      year: 'Second Year IT',
-      bio: 'Cybersecurity enthusiast and web developer, passionate about building secure applications.',
+      year: 'Final Year CSE',
+      bio: 'Web Development',
       skills: ['Python', 'Cybersecurity', 'Linux', 'Ethical Hacking'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/sharim.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -112,12 +99,12 @@ const Teams = () => {
       }
     },
     {
-      name: 'Vikram Thakur',
+      name: 'Pranjal Rawat',
       role: 'Core Member',
-      year: 'First Year CSE',
-      bio: 'Passionate about competitive programming and algorithm design.',
+      year: 'Final Year CSE',
+      bio: 'Data Structures and Algorithms',
       skills: ['C++', 'Java', 'Data Structures', 'Algorithms'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/pranjal.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -125,12 +112,12 @@ const Teams = () => {
       }
     },
     {
-      name: 'Anita Singh',
+      name: 'Siddarth Choudhary',
       role: 'Core Member',
-      year: 'First Year IT',
-      bio: 'Frontend enthusiast learning modern web technologies and design principles.',
+      year: 'Final Year CSE',
+      bio: 'DevOps',
       skills: ['HTML', 'CSS', 'JavaScript', 'React'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/siddarth.png',
       social: {
         github: '#',
         linkedin: '#',
@@ -138,40 +125,239 @@ const Teams = () => {
       }
     },
     {
-      name: 'Rohit Gupta',
+      name: 'Ujjwal Kumar Rajak',
       role: 'Core Member',
-      year: 'First Year ECE',
-      bio: 'IoT enthusiast exploring the intersection of hardware and software.',
+      year: 'Final Year CSE',
+      bio: 'Web Development',
       skills: ['Arduino', 'Raspberry Pi', 'Python', 'C'],
-      image: '/api/placeholder/300/300',
+      image: './devCans4thyear/ujjwal.png',
       social: {
         github: '#',
         linkedin: '#',
         email: 'rohit@devcans.com'
       }
+    }
+  ];
+
+  const members = [
+    {
+      name: 'Ayan Roy',
+      role: 'Member',
+      year: 'Third Year EEE',
+      bio: 'Machine Learning & Data Science',
+      skills: ['Python', 'JavaScript', 'Git', 'Linux'],
+      image: './3rdYear/ayan.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'arjun@devcans.com'
+      }
     },
     {
-      name: 'Kavya Joshi',
-      role: 'Core Member',
+      name: 'Yash Gupta',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Linux & Networking',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Figma'],
+      image: './3rdYear/yash.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'priya.j@devcans.com'
+      }
+    },
+    {
+      name: 'Sathvik Choudhary',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Generative AI',
+      skills: ['C', 'Arduino', 'Electronics', 'Python'],
+      image: './3rdYear/sathvik.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'karan@devcans.com'
+      }
+    },
+    {
+      name: 'Sulav Singhal',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development',
+      skills: ['C++', 'Python', 'Data Structures', 'Problem Solving'],
+      image: './3rdYear/sulav.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'sneha@devcans.com'
+      }
+    },
+    {
+      name: 'Siddareddy Rajesh Reddy',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development',
+      skills: ['SQL', 'Java', 'Spring Boot', 'MySQL'],
+      image: './3rdYear/rajesh.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'raghav@devcans.com'
+      }
+    },
+    {
+      name: 'Gaurav Kumar Choudary',
+      role: 'Member',
       year: 'First Year CSE',
-      bio: 'Machine learning enthusiast working on computer vision projects.',
-      skills: ['Python', 'OpenCV', 'TensorFlow', 'NumPy'],
-      image: '/api/placeholder/300/300',
+      bio: 'AIML & DSA',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/gaurav.jpg',
       social: {
         github: '#',
         linkedin: '#',
         email: 'kavya@devcans.com'
-      }
-    }
+      },
+      
+    },
+     {
+      name: 'Mukul',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'DSA',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/mukul.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Shishupal Kumar',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development & python',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/shishupal.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Satya Ranjan Barik',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'AIML & Web Development',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/satya.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Annepu Gnana Prasad',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development & python',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/gnana.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Valle Durga Prasad',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development & Java',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/durga.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Shirshak Sinha',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/shirshak.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+     {
+      name: 'Sohit',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/sohit.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    }, {
+      name: 'Susheel Kumar Gupta',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Web Development& UI/UX',
+      skills: ['Python', 'NumPy', 'Pandas', 'OpenCV'],
+      image: './3rdYear/susheel.jpg',
+      social: {
+        github: '#',
+        linkedin: '#',
+        email: 'kavya@devcans.com'
+      },
+      
+    },
+
   ];
 
-  const renderPersonCard = (person: any, showSkills = true) => (
+  const renderPersonCard = (person, showSkills = true) => (
     <div key={person.name} className="card-terminal cyber-glow group fade-in-up">
-      <div className="relative mb-6 overflow-hidden rounded-lg">
-        <div className="w-full h-48 bg-terminal-bg-lighter flex items-center justify-center">
-          <div className="w-24 h-24 bg-terminal-green/20 rounded-full flex items-center justify-center">
+      <div className="relative mb-6 overflow-hidden rounded-lg ">
+        <div className="w-full h-50 bg-terminal-bg-lighter flex items-center justify-center">
+          <img
+            src={person.image}
+            alt={`${person.name} - ${person.role}`}
+            className="w-40 h-40 object-cover rounded-full transition-transform duration-300 group-hover:scale-110 shadow-lg border-2 border-terminal-green/30"
+            onError={(e) => {
+              // Fallback to initials if image fails to load
+              const target = e.target;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling;
+              if (fallback) {
+                fallback.style.display = 'flex';
+              }
+            }}
+          />
+          {/* Fallback initials circle - hidden by default, shown if image fails */}
+          <div 
+            className="w-40 h-40 bg-terminal-green/20 rounded-full flex items-center justify-center shadow-lg border-2 border-terminal-green/30 transition-transform duration-300 group-hover:scale-110"
+            style={{ display: 'none' }}
+          >
             <span className="text-2xl font-bold terminal-text">
-              {person.name.split(' ').map((n: string) => n[0]).join('')}
+              {person.name.split(' ').map((n) => n[0]).join('')}
             </span>
           </div>
         </div>
@@ -191,7 +377,7 @@ const Teams = () => {
 
       {showSkills && person.skills && (
         <div className="flex flex-wrap gap-2 mb-6">
-          {person.skills.map((skill: string) => (
+          {person.skills.map((skill) => (
             <span
               key={skill}
               className="px-2 py-1 bg-terminal-green/20 text-terminal-green text-xs rounded border border-terminal-green/30"
@@ -208,6 +394,8 @@ const Teams = () => {
             href={person.social.github}
             className="text-muted-foreground hover:text-terminal-green transition-colors"
             title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Github size={18} />
           </a>
@@ -217,6 +405,8 @@ const Teams = () => {
             href={person.social.linkedin}
             className="text-muted-foreground hover:text-terminal-green transition-colors"
             title="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Linkedin size={18} />
           </a>
@@ -273,21 +463,43 @@ const Teams = () => {
         </section>
 
         {/* Current Team Leads */}
+       <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold terminal-text mb-6 slide-in-left">
+                Team Leads
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-in-right" style={{ animationDelay: '0.2s' }}>
+                Our enthusiastic members who are learning, growing, and contributing to our community.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamLeads.map((member, index) => (
+                <div key={member.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
+                  {renderPersonCard(member)}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Core Members */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold terminal-text mb-6 slide-in-left">
-                Current Team Leads
+                Core Members
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-in-right" style={{ animationDelay: '0.2s' }}>
-                The passionate leaders driving DevCans forward and organizing amazing events.
+                Our enthusiastic members who are learning, growing, and contributing to our community.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {teamLeads.map((lead, index) => (
-                <div key={lead.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
-                  {renderPersonCard(lead)}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {coreMembers.map((member, index) => (
+                <div key={member.name} style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
+                  {renderPersonCard(member)}
                 </div>
               ))}
             </div>
@@ -295,14 +507,14 @@ const Teams = () => {
         </section>
 
         {/* Members */}
-        <section className="py-20 bg-terminal-bg-lighter/30">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold terminal-text mb-6 slide-in-left">
-                Core Members
+                Members
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-in-right" style={{ animationDelay: '0.2s' }}>
-                Our dedicated members who actively contribute to the club's growth and success.
+                Our enthusiastic members who are learning, growing, and contributing to our community.
               </p>
             </div>
 
@@ -317,7 +529,7 @@ const Teams = () => {
         </section>
 
         {/* Join Team CTA */}
-        <section className="py-20">
+        <section className="py-20 bg-terminal-bg-lighter/30">
           <div className="container mx-auto px-4 text-center">
             <div className="card-terminal max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '1s' }}>
               <h3 className="text-2xl font-bold terminal-text mb-4">Want to Join Our Team?</h3>
