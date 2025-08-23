@@ -150,7 +150,7 @@ const Teams = () => {
       }
     },
     {
-      name: 'Sathvik Choudhary',
+      name: 'Satvik Choudhary',
       role: 'Member',
       year: 'Third Year CSE',
       bio: 'Generative AI',
