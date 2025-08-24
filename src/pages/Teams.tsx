@@ -137,6 +137,19 @@ const Teams = () => {
       }
     },
     {
+      name: 'Satvik Choudhary',
+      role: 'Member',
+      year: 'Third Year CSE',
+      bio: 'Generative AI',
+      skills: ['C', 'Arduino', 'Langchain', 'Python','FastAPI'],
+      image: './3rdYear/sathvik.jpg',
+      social: {
+        github: 'https://github.com/satvik-7x7',
+        linkedin: '#',
+        email: 'b230022@nitsikkim.ac.in'
+      }
+    },
+    {
       name: 'Yash Gupta',
       role: 'Member',
       year: 'Third Year CSE',
@@ -147,19 +160,6 @@ const Teams = () => {
         github: '#',
         linkedin: '#',
         email: 'priya.j@devcans.com'
-      }
-    },
-    {
-      name: 'Satvik Choudhary',
-      role: 'Member',
-      year: 'Third Year CSE',
-      bio: 'Generative AI',
-      skills: ['C', 'Arduino', 'Electronics', 'Python'],
-      image: './3rdYear/sathvik.jpg',
-      social: {
-        github: '#',
-        linkedin: '#',
-        email: 'karan@devcans.com'
       }
     },
     {
